@@ -1,0 +1,13 @@
+﻿测试日期：2026-11-18
+
+云端环境使用从 PowerShell 官方 GitHub Release 下载的 PowerShell 7.7.0 执行测试，仅使用包内虚构缓存。
+已通过：三个 PowerShell 文件的语法解析；UTF-8 模型缓存读取；精确提取模型名与可见状态；桌面空匹配；文件缺失；无效 JSON；未知结构；不带 -RunRefresh 时仅显示说明、不调用外部程序。
+没有触碰用户电脑或真实账号资料。
+
+未测试：Windows PowerShell 5.1 上完整脚本实际运行；Windows 安装包发现；当前版本原生 debug models 的真实联网调用；所有安装渠道和自定义 CODEX_HOME。
+脚本使用兼容 Windows PowerShell 5.1 的语法，采用 UTF-8 BOM 保存，但跨版本兼容仍需要真实 Windows 验证。
+
+本次分享稿中的既有手工排查命令曾在用户 Windows 上运行成功。新打包脚本的测试范围如上，不把两者混为一谈。
+
+本地自测命令（使用虚构数据）：
+.	ests\Test-Inspector.ps1

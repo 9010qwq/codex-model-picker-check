@@ -1,0 +1,15 @@
+﻿记录日期：2026-11-18
+
+官方命令文档：
+https://learn.chatgpt.com/docs/cli/reference#codex-debug-models
+官方排查文档：
+https://learn.chatgpt.com/docs/reference/troubleshooting
+
+本包的核心依据是本次 Windows 检查：应用内菜单、内置程序版本、两份模型缓存的摘要，以及用户对同账号网页版与子工作区的测试报告。
+本次桌面 About 版本：26.1111.21308。
+本次内置 CLI：0.169.0-alpha.11.1。
+两份缓存记录的 client_version：0.169.0。
+这些是不同组件的版本字段，不应直接视为冲突。
+
+诊断工具可能因后续应用目录或 JSON 结构改变而不再适用。脚本遇到不支持的结构会给出状态，不自动修复。
+当前版本没有实现 daemon 管理、账户操作、模型默认值修改或缓存替换。
